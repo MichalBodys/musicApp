@@ -40,6 +40,16 @@
       />
       <ErrorMessage class="text-red-600" name="age" />
     </div>
+    <!-- Usser type -->
+    <div class="mb-3">
+      <label class="mb-3 ">User type</label>
+      <vee-field class=" block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded" name="user_type" as="select">
+        <option value="Listener" selected="selected">Listener</option>
+        <option value="Artist">Artist</option>
+        <option value="Black elf">Black elf</option>
+      </vee-field>
+      <ErrorMessage class="text-red-600"  name="user_type" />
+    </div>
     <!-- Password -->
     <div class="mb-3">
       <label class="inline-block mb-2">Password</label>
@@ -116,13 +126,15 @@ export default {
         name: 'required|min:3|max:100|alpha_spaces',
         email: 'required|min:5|max:100|email',
         age: 'required|min_value:18|max_value:100',
+        user_type:'required',
         password: 'required|min:9|max:100|excluded:password',
         confirm_password: 'password_mismatch:@password',
         country: 'required|country_excluded:Antarctica,',
         tos: 'tos'
       },
       userData: {
-        country: 'USA'
+        country: 'USA',
+        user_type: 'Listener'
       },
       reg_in_submision: false,
       reg_show_alert: false,
@@ -151,6 +163,7 @@ export default {
         await usersCollection.add({
           name: values.name,
           email: values.email,
+          user_type: values.user_type,
           age: values.age,
           country: values.country
         });
