@@ -167,9 +167,11 @@ export default {
         this.reg_alert_msg = 'An unexpected error occured. Please try again later'
         return
       }
-      
+
+
       this.reg_alert_variant = 'bg-green-500'
-      this.reg_alert_msg = ' Succes! Your account has been created '
+      this.reg_alert_msg = ' Succes! Your account has been created ';
+      window.location.reload();
     }
   }
 }
