@@ -52,8 +52,8 @@ export default {
     },
     signOut() {
       this.userStore.signOut()
-      // console.log(this.$route)
-      if(this.$route.requiresAuth){
+
+      if (this.$route.meta.requiresAuth) {
         this.$router.push({ name: 'home' })
       }
     }

@@ -26,7 +26,7 @@ const routes = [
       next()
     },
     meta: {
-      requiresAuth: true
+      requiresAuth: true,
     }
   },
   {
@@ -51,7 +51,7 @@ router.beforeEach((to, from, next) => {
 
   if (!to.meta.requiresAuth) {
     next()
-    return
+    return;
   }
   const store = useUserStore()
   if (store.userLoggedIn) {
