@@ -1,39 +1,59 @@
-
 <template>
-    <navigation></navigation>
+  <navigation></navigation>
 
-    <router-view></router-view>
+  <router-view v-slot="{ Component, route }">
+    <transition name="fade" mode="out-in">
+      <div :key="route.name">
+        <component :is="Component"></component>
+      </div>
+    </transition>
+  </router-view>
 
+  <player />
 
-    <player />
-
-
-    <auth></auth>
+  <auth></auth>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue';
-import Player from './components/Player.vue';
-import Auth from './components/Auth.vue';
-import { mapWritableState } from 'pinia';
-import useUserStore from "@/stores/user"
-import { auth } from './includes/firebase';
+import Navigation from './components/Navigation.vue'
+import Player from './components/Player.vue'
+import Auth from './components/Auth.vue'
+import { mapWritableState } from 'pinia'
+import useUserStore from '@/stores/user'
+import { auth } from './includes/firebase'
 
-
-export default{
-  name: "App",
-  components:{
+export default {
+  name: 'App',
+  components: {
     Navigation,
     Auth,
-    Player,
+    Player
   },
-  computed:{
-    ...mapWritableState(useUserStore, ["userLoggedIn"]),
+  computed: {
+    ...mapWritableState(useUserStore, ['userLoggedIn'])
   },
-  created(){
-    if(auth.currentUser){
-      this.userLoggedIn = true;
+  created() {
+    if (auth.currentUser) {
+      this.userLoggedIn = true
     }
-  },
+  }
 }
 </script>
+
+<style>
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.5s linear;
+}
+
+.fade-leave-to {
+  transition: opacity 0.5s linear;
+}
+
+.fade-leave-to {
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+</style>
