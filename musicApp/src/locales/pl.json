@@ -1,0 +1,11 @@
+{
+    "home": {
+      "listen": "Słuchaj świetnej muzyki !"
+    },
+    "song":{
+        "comment_count": "brak komentarzy | 1 komentarz | komentarze {count}  "
+    },
+    "manage":{
+        "my_songs": "Moje utwory"
+      }
+  }
