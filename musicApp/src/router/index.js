@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Manage from '@/views/Manage.vue'
 import error from '@/views/error.vue'
+import Song from '@/views/Song.vue'
 import useUserStore from '@/stores/user'
 
 const routes = [
@@ -34,10 +35,15 @@ const routes = [
     redirect: { name: 'manage' }
   },
   {
-    name: 'error',
+    name: 'song',
+    path: '/song/:id',
+    component: Song
+  },
+ {
+
     path: '/:catchAll(.*)*',
     component: error
-  }
+  },
 ]
 
 const router = createRouter({
