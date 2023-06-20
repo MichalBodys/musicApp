@@ -7,24 +7,25 @@ import VeeValidatePlugin from './includes/validation'
 import { auth } from './includes/firebase'
 import Icon from '@/directives/Icon'
 import i18n from './includes/i18n'
+import { registerSW } from 'virtual:pwa-register'
 
 import './assets/base.css'
 import './assets/main.css'
 
-let app;
+registerSW({ immediate: true })
+
+let app
 
 auth.onAuthStateChanged(() => {
-    if(!app){
-        app = createApp(App)
+  if (!app) {
+    app = createApp(App)
 
-        app.use(createPinia())
-        app.use(router)
-        app.use(VeeValidatePlugin)
-        app.use(i18n)
-        app.directive("icon", Icon)
+    app.use(createPinia())
+    app.use(router)
+    app.use(VeeValidatePlugin)
+    app.use(i18n)
+    app.directive('icon', Icon)
 
-        app.mount('#app')
-    }
-
-
+    app.mount('#app')
+  }
 })
