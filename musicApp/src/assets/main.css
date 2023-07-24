@@ -4,7 +4,7 @@ a {
 
 /* text-yellow-500 */
 a:hover {
-  color: #f59e0b;
+  color: #C3E0E5;
   text-decoration: none;
 }
 
@@ -20,8 +20,8 @@ a:hover {
 }
 
 .introduction-bg {
-  animation: slide 50s linear infinite;
-  will-change: background-position;
+  animation: slide 10s linear infinite;
+  will-change: opacity;
   z-index: -1;
 }
 
@@ -36,7 +36,7 @@ a:hover {
   border-style: solid;
 }
 
-input[type="file"] {
+input[type='file'] {
   margin-top: 20px;
 }
 
@@ -56,8 +56,8 @@ input[type="file"] {
 }
 
 .music-bg {
-  animation: slide 50s linear infinite;
-  will-change: background-position;
+  animation: slider 50s linear infinite;
+  will-change: opacity;
 }
 
 @keyframes progress-bar-stripes {
@@ -68,12 +68,25 @@ input[type="file"] {
     background-position: 0 0;
   }
 }
-/*
+
 @keyframes slide {
   0% {
-    background-position: 0 0;
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
-    background-position: -4000px 0;
+    opacity: 0.5;
   }
-} */
+}
+
+
+@keyframes slider {
+  0% {
+    background-position: -3000px
+  }
+  100% {
+    back-position: o
+  }
+}

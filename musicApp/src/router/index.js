@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
-import Manage from '@/views/Manage.vue'
-import error from '@/views/error.vue'
-import Song from '@/views/Song.vue'
+
 import useUserStore from '@/stores/user'
+
+const About = () => import('@/views/About.vue')
+const Manage = () => import('@/views/Manage.vue')
+const error = () => import('@/views/error.vue')
+const Song = () => import('@/views/Song.vue')
+const Home = () => import('@/views/Home.vue')
 
 const routes = [
   {
@@ -27,7 +29,7 @@ const routes = [
       next()
     },
     meta: {
-      requiresAuth: true,
+      requiresAuth: true
     }
   },
   {
@@ -39,11 +41,10 @@ const routes = [
     path: '/song/:id',
     component: Song
   },
- {
-
+  {
     path: '/:catchAll(.*)*',
     component: error
-  },
+  }
 ]
 
 const router = createRouter({
@@ -57,7 +58,7 @@ router.beforeEach((to, from, next) => {
 
   if (!to.meta.requiresAuth) {
     next()
-    return;
+    return
   }
   const store = useUserStore()
   if (store.userLoggedIn) {
