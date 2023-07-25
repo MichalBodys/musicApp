@@ -2,7 +2,7 @@
   <div class="flex justify-between text-center mt-4 text-white z-10 px-5">
     <div class="flex w-1/3">
       <p class="my-auto">
-        Add your favoorite songs, listen without limits comment other users choices.
+        {{ $t("about.add") }}
       </p>
     </div>
     <div class="flex w-1/3">
@@ -13,11 +13,11 @@
     </div>
     <div class="flex w-1/3">
       <p class="my-auto mx-auto">
-        Register to be a part of our comunity !<br />
+        {{ $t("about.register") }}<br />
         <button @click.prevent="toogleAuthModal"
           class="bg-white text-black uppercase rounded-full px-4 py-1 my-2 border-2 border-black drop-shadow-lg hover:bg-slate-600 hover:text-white transition-colors duration-300"
         >
-          join us
+          {{ $t("about.join") }}
         </button>
       </p>
     </div>

@@ -23,7 +23,7 @@
       </div>
       <vee-form :validation-schema="schema" :initial-values="song" @submit="edit">
         <div class="mb-3">
-          <label class="inline-block mb-2">Song Title</label>
+          <label class="inline-block mb-2">{{ $t("composition.song_title") }}</label>
           <vee-field
             name="modified_name"
             type="text"
@@ -34,7 +34,7 @@
           <ErrorMessage class="text-red-600" name="modified_name" />
         </div>
         <div class="mb-3">
-          <label class="inline-block mb-2">Genre</label>
+          <label class="inline-block mb-2">{{ $t("composition.genre") }}</label>
           <vee-field
             name="genre"
             type="text"
@@ -49,7 +49,7 @@
           class="py-1.5 px-3 rounded text-white bg-green-600"
           :disabled="in_submission"
         >
-          Submit
+        {{ $t("composition.submit") }}
         </button>
         <button
           type="button"
@@ -57,7 +57,7 @@
           @click.prevent="showForm = false"
           :disabled="in_submission"
         >
-          Go Back
+        {{ $t("composition.go_back") }}
         </button>
       </vee-form>
     </div>

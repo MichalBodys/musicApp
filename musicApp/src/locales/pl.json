@@ -1,11 +1,53 @@
 {
-    "home": {
-      "listen": "Słuchaj świetnej muzyki !"
-    },
-    "song":{
-        "comment_count": "brak komentarzy | 1 komentarz | komentarze {count}  "
-    },
-    "manage":{
-        "my_songs": "Moje utwory"
-      }
+  "home": {
+    "listen": "Słuchaj świetnej muzyki !",
+    "welcomeOne": "Zarejestruj sie aby dodawać swoje ulubione utwory, komentować i dzielić sie swoim gustem muzycznym z innymi!",
+    "welcomeTwo": "Cześć! miłego czasu!",
+    "songs": "Songs"
+  },
+  "nav": {
+    "about": "Wiecej",
+    "manage": "Zarządzanie",
+    "logout": "Wyloguj",
+    "login": "Logowanie/Rejestracja"
+  },
+  "song": {
+    "comment_count": "brak komentarzy | 1 komentarz | komentarze {count}  "
+  },
+  "manage": {
+    "my_songs": "Moje utwory",
+    "upload": "Dodaj",
+    "drop": "Przenieś swój plik tutaj"
+  },
+  "composition":{
+    "song_title": "Tytuł",
+    "genre": "Rodzaj",
+    "submit": "Zatwierdź",
+    "go_back": "Wróć",
+    "my_songs": "Moje utwory"
+  },
+  "about":{
+    "add" : "Dodawaj swoje ulubione utwory, słuchaj bez limitów i rozmawiaj o wyborach innych użytkowników",
+    "register": "Zarejestruj sie by być cześcią naszej społeczności",
+    "join":"Dołącz do nas!"
+  },
+  "form":{
+    "y_acc":"Twoje konto",
+    "login": "Logowanie",
+    "register": "Rejestracja",
+    "e_name":"Wprowadź Imię",
+    "e_email":"Wprowadź E-mail",
+    "name":"Imie",
+    "email":"E-mail",
+    "age":"Wiek",
+    "pass":"Hasło",
+    "user_type":"Rodzaj użytkownika",
+    "rpt_pass":"Powtórz hasło",
+    "country":"Kraj",
+    "accept":"Akcpetuje ",
+    "tos": "Warunki usługi",
+    "submit": "Potwierdź"
   }
+
+
+}

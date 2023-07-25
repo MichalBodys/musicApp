@@ -1,6 +1,17 @@
 {
   "home": {
-    "listen": "Listen to Great Music!"
+    "listen": "Listen to Great Music!",
+    "welcomeOne": "Register to upload your favorite music, add comments and share your music taste with others !",
+    "welcomeTwo": "Hello have a good time!",
+    "songs": "Songs"
+
+  },
+  "nav":{
+    "about": "About",
+    "manage": "Manage",
+    "logout": "Logout",
+    "login": "Login/Register"
+
   },
   "song": {
     "comment_count": "No comments | 1 comment | {count} comments"
@@ -10,6 +21,36 @@
     "tos": "Terms of Service"
   },
   "manage":{
-    "my_songs": "My Songs"
+    "upload": "Upload",
+    "drop": "Drop your files here"
+  },
+  "composition":{
+    "song_title": "Song title",
+    "genre": "Genre",
+    "submit": "Submit",
+    "go_back": "Go back",
+    "my_songs": "My songs"
+  },
+  "about":{
+    "add" : "Add your favorite songs, listen without limits comment other users choices.",
+    "register": "Register to be a part of our comunity !",
+    "join":"Join Us"
+  },
+  "form":{
+    "y_acc":"Your account",
+    "login": "Login",
+    "register": "Register",
+    "e_name":"Enter Name",
+    "e_email":"Enter Email",
+    "name":"Name",
+    "email":"E-mail",
+    "age":"Age",
+    "user_type":"User type",
+    "pass":"Password",
+    "rpt_pass":"Repeat password",
+    "country":"Country",
+    "accept":"I accept Music's",
+    "tos": "Terms of Service",
+    "submit": "Submit"
   }
 }

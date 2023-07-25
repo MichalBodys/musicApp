@@ -3,29 +3,29 @@
     <!-- Introduction -->
     <section class="mb-8 py-20 text-white text-center relative">
       <div
-        class="absolute inset-0 w-full h-full  introduction-bg bg-cover bg-center"
+        class="absolute inset-0 w-full h-full introduction-bg bg-cover bg-center"
         style="background-image: url(assets/img/theme.jpg)"
       ></div>
       <div class="container mx-auto">
         <div class="text-white main-header-content">
-          <h1 class="font-bold text-5xl mb-5">{{ $t("home.listen") }}</h1>
+          <h1 class="font-bold text-5xl mb-5">{{ $t('home.listen') }}</h1>
           <p v-if="!userStore.userLoggedIn" class="w-full md:w-8/12 mx-auto">
-           Register to upload your favorite music, add comments and share your music taste with others !
+            {{ $t('home.welcomeOne') }}
           </p>
-          <p v-else>Hello have a good time! {{ userStore.name }} </p>
+          <p v-else>{{ $t('home.welcomeTwo') }}</p>
         </div>
       </div>
-
-
     </section>
 
     <!-- Main Content -->
     <section class="container mx-auto">
       <div class="bg-slate-200 relative flex flex-col">
-        <div class="px-6 pt-6 pb-5 font-bold  border-gray-200" v-icon.right="'headphones-alt'">
-          <span class="card-title">Songs</span>
-          <!-- Icon -->
+        <div class="px-6 pt-6 pb-5 font-bold border-gray-200" v-icon.right="'headphones-alt'">
+          <p class="card-title">
+            Songs
+          </p>
 
+          <!-- Icon -->
         </div>
         <!-- Playlist -->
         <ol id="playlist">
@@ -40,8 +40,8 @@
 <script>
 import { songsCollection } from '@/includes/firebase'
 import SongItem from '../components/SongItem.vue'
-import { mapStores } from 'pinia';
-import useUserStore from '@/stores/user';
+import { mapStores } from 'pinia'
+import useUserStore from '@/stores/user'
 
 export default {
   name: 'Home',
